@@ -32,7 +32,9 @@
                 <span slot="title">导航四</span>
             </el-menu-item>
         </el-menu>
-        <Tool @foldChange="foldChange"></Tool>
+        <Tool @foldChange="foldChange">
+            <div>测试</div>
+        </Tool>
     </div>
 </template>
 
@@ -51,7 +53,6 @@
         methods: {
             foldChange(isFold){
                 this.isCollapse = isFold
-                console.log(isFold)
             }
         }
     }

@@ -1,11 +1,15 @@
 <template>
-    <div class="tool-style">
-        <div @click="foldChange">
-            <div class="el-icon-s-fold" style="color:#fff;font-size: 30px;" v-if="isFold"></div>
-            <div class="el-icon-s-unfold" style="color:#fff;font-size: 30px;" v-else></div>
+    <div style="width:100%;">
+        <div class="tool-style">
+            <div @click="foldChange">
+                <div class="el-icon-s-fold" style="color:#fff;font-size: 30px;" v-if="isFold"></div>
+                <div class="el-icon-s-unfold" style="color:#fff;font-size: 30px;" v-else></div>
+            </div>
+            <el-avatar :size="40" :src="circleUrl"></el-avatar>
         </div>
-        <el-avatar :size="40" :src="circleUrl"></el-avatar>
+        <slot></slot>
     </div>
+   
 </template>
 <script>
     export default{
@@ -26,7 +30,6 @@
 </script>
 <style>
     .tool-style{
-        width: 100%;
         height: 50px;
         background-color:#001f3f;
         display: flex;

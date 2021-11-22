@@ -1,20 +1,19 @@
 <template>
   <div id="app">
-   <NavMenu></NavMenu>
-   
+    <router-view />
   </div>
 </template>
 
 <script>
 // import SeatControl from './components/SeatControl.vue'
-import NavMenu from '@/components/NavMenu' 
+// import NavMenu from '@/components/NavMenu' 
 
 
 export default {
   name: 'App',
   components: {
     // SeatControl,
-    NavMenu
+    // NavMenu
   }
 }
 </script>
